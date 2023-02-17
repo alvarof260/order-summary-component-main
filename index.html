@@ -8,26 +8,42 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+<body class="bg">
+  <main>
+    <section id="container-card">
+      <div class="card" >
+        <div class="card__box-img box-img">
+          <img class="box-img__image" src="images/illustration-hero.svg" alt="a girl listen music in her phone">
+        </div>
+        <div class="card__box-text box-text">
+            <h1 class="box-text__title">
+              Order Summary
+            </h1>
+            <p class="box-text__paragraph">
+              You can now listen to millions of songs, audiobooks, and podcasts on any 
+              device anywhere you like!
+            </p>
+            <div class="box-text__offer">
+              <div class="offer__box">
+                <img src="images/icon-music.svg" alt="icon music" class="box__img">
+              <span class="box__text">
+                Annual Plan
+                $59.99/year
+              </span>
+              </div>
+              <a href="#" class="offer__link">Change</a>
+            </div>
+            <button class="box-text__btn">Proceed to Payment</button>
+            <a href="#" class="box-text__link">Cancel Order</a>
+        </div>   
+      </div>
+    </section>
+  </main>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
