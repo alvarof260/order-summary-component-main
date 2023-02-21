@@ -3,11 +3,157 @@
 @import 'utilities/mixins';
 
 .bg{
-    background-image: url(../images/pattern-background-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include mobile{
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $pale-blue;
+    }
+    @include desktop{
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: $pale-blue;
+    }
 }
 
+
+#container-card{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    @include mobile{
+        @include card(20.438rem, 35.438rem);
+        border-radius: 1rem;
+        .box-img{
+            width: 20.438rem;
+            &__image{
+                width: 100%;
+                border-radius: 1rem 1rem 0 0;
+            }
+        }
+        .box-text{
+            padding: 0 1.563rem;
+            &__title{
+                font-family: $font;
+                font-size: 1.5rem;
+                font-weight: 900;
+                text-align: center;
+                color: $dark-blue;
+            }
+            &__paragraph{
+                font-family: $font;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.6;
+                color: $desaturated-blue;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            &__offer{
+                background-color: $very-pale-blue;
+                @include card(17.375rem, 5rem);
+                border-radius: .5rem;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-around;
+                margin-bottom: 1.5rem;
+                .offer__box{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    gap: 1.25rem;
+                    .text__price{
+                        font-family: $font;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: $dark-blue;
+                        .price__span{
+                            color: $desaturated-blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .offer__link{
+                    font-family: $font;
+                    font-size: .875rem;
+                    font-weight: 700;
+                    color: $bright-blue;
+                    cursor: pointer;
+                    &:hover,&:focus{
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &__input{
+                display: flex;
+                flex-flow: column nowrap;
+                color: $bright-blue;
+                .input__btn{
+                    @include card(17.5rem,3.125rem);
+                    border: none;
+                    border-radius: .8rem;
+                    background-color: $bright-blue;
+                    color: $white;
+                    font-family: $font;
+                    font-size: .875rem;
+                    font-weight: 900;
+                    margin-bottom: 1.875rem;
+                    box-shadow: $bright-blue-blur 0px 15px 30px -10px;
+                    cursor: pointer;
+                    &:hover,&:focus{
+                        background-color: $purple;
+                    }
+                }
+
+                .input__link{
+                    text-align: center;
+                    color: $desaturated-blue;
+                    font-family: $font;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover, &:focus{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    @include desktop{
+            @include card(450px,700px);
+            .box-img{
+                width: 450px;
+                &__image{
+                    width: 100%;
+                }
+            }
+
+            .box-text{
+                padding:0 3.125rem ;
+                &__title{
+                    font-size: 28px;
+                    margin-top: 55px;
+                }
+                &__offer{
+                    @include card(350px,100px);
+                }
+                .input__btn{
+                    @include card(350px,50px);
+                }
+            }
+    }
+}
 
 
 .attribution { 

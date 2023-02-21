@@ -1,0 +1,19 @@
+@mixin mobile
+{
+    @media screen and (min-width:375px) {
+        @content;
+    }
+}
+
+@mixin desktop
+{
+    @media screen and (min-width:1440px) {
+        @content;
+    }
+}
+
+@mixin card($width, $height)
+{
+    width: $width;
+    height: $height;
+}

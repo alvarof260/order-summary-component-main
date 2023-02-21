@@ -1,10 +1,134 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 /*Font*/
 /*Colors*/
-.bg {
-  background-image: url(../images/pattern-background-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+@media screen and (min-width: 375px) {
+  .bg {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #e0e8ff; } }
+
+@media screen and (min-width: 1440px) {
+  .bg {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #e0e8ff; } }
+
+#container-card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; }
+  @media screen and (min-width: 375px) {
+    .card {
+      width: 20.438rem;
+      height: 35.438rem;
+      border-radius: 1rem; }
+      .card .box-img {
+        width: 20.438rem; }
+        .card .box-img__image {
+          width: 100%;
+          border-radius: 1rem 1rem 0 0; }
+      .card .box-text {
+        padding: 0 1.563rem; }
+        .card .box-text__title {
+          font-family: "Red Hat Display", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 900;
+          text-align: center;
+          color: #1f2f56; }
+        .card .box-text__paragraph {
+          font-family: "Red Hat Display", sans-serif;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.6;
+          color: #7280a7;
+          text-align: center;
+          margin-bottom: 1rem; }
+        .card .box-text__offer {
+          background-color: #f5f7ff;
+          width: 17.375rem;
+          height: 5rem;
+          border-radius: .5rem;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-around;
+          margin-bottom: 1.5rem; }
+          .card .box-text__offer .offer__box {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 1.25rem; }
+            .card .box-text__offer .offer__box .text__price {
+              font-family: "Red Hat Display", sans-serif;
+              font-size: 1rem;
+              font-weight: 700;
+              color: #1f2f56; }
+              .card .box-text__offer .offer__box .text__price .price__span {
+                color: #7280a7;
+                font-weight: 500; }
+          .card .box-text__offer .offer__link {
+            font-family: "Red Hat Display", sans-serif;
+            font-size: .875rem;
+            font-weight: 700;
+            color: #3829e0;
+            cursor: pointer; }
+            .card .box-text__offer .offer__link:hover, .card .box-text__offer .offer__link:focus {
+              text-decoration: none; }
+        .card .box-text__input {
+          display: flex;
+          flex-flow: column nowrap;
+          color: #3829e0; }
+          .card .box-text__input .input__btn {
+            width: 17.5rem;
+            height: 3.125rem;
+            border: none;
+            border-radius: .8rem;
+            background-color: #3829e0;
+            color: white;
+            font-family: "Red Hat Display", sans-serif;
+            font-size: .875rem;
+            font-weight: 900;
+            margin-bottom: 1.875rem;
+            box-shadow: rgba(56, 41, 224, 0.5) 0px 15px 30px -10px;
+            cursor: pointer; }
+            .card .box-text__input .input__btn:hover, .card .box-text__input .input__btn:focus {
+              background-color: #584be2; }
+          .card .box-text__input .input__link {
+            text-align: center;
+            color: #7280a7;
+            font-family: "Red Hat Display", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer; }
+            .card .box-text__input .input__link:hover, .card .box-text__input .input__link:focus {
+              cursor: pointer; } }
+  @media screen and (min-width: 1440px) {
+    .card {
+      width: 450px;
+      height: 700px; }
+      .card .box-img {
+        width: 450px; }
+        .card .box-img__image {
+          width: 100%; }
+      .card .box-text {
+        padding: 0 3.125rem; }
+        .card .box-text__title {
+          font-size: 28px;
+          margin-top: 55px; }
+        .card .box-text__offer {
+          width: 350px;
+          height: 100px; }
+        .card .box-text .input__btn {
+          width: 350px;
+          height: 50px; } }
 
 .attribution {
   font-size: 11px;
